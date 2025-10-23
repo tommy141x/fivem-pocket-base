@@ -1,6 +1,6 @@
 # PocketBase for FiveM
 
-A production-ready PocketBase integration for FiveM with automatic setup, authentication, backups, and comprehensive exports.
+A production-ready PocketBase instance in one FiveM resource with automatic setup, authentication, backups, and comprehensive exports.
 
 ---
 
@@ -42,7 +42,7 @@ Config.Port = 8090
 
 **Important:** If you enable `ExposeAdmin`, you must:
 - Open port 8090 in your firewall
-- Configure port forwarding if behind a router
+- Configure port forwarding if needed
 - Set a strong superuser password
 
 ### Superuser Credentials
@@ -453,9 +453,6 @@ end
 ### "Batch requests are not allowed"
 Enable Batch API in PocketBase Admin > Settings > Batch API
 
-### "Missing or invalid auth collection context"
-The collection must be an auth-type collection. Create one in admin UI.
-
 ### "Public URL not accessible"
 Check firewall settings and port forwarding. This doesn't affect local script access.
 
@@ -471,11 +468,3 @@ Check `Config.Superuser` credentials in `config.lua`. Delete and restart to rege
 - **Admin UI**: http://127.0.0.1:8090/_/ (when running)
 
 ---
-
-## 📝 License
-
-This resource integrates PocketBase (MIT License) into FiveM.
-
-**Version**: 0.30.4+
-**FiveM Forum**: [Link to your forum post]
-**Support**: [Link to your Discord/GitHub]
