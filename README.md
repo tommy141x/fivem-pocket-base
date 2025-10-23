@@ -9,7 +9,7 @@ A production-ready PocketBase integration for FiveM with automatic setup, authen
 ### Installation
 
 1. Download and extract to your `resources` folder
-2. Rename the folder to `pb`
+2. The resource folder name should be `pb`
 3. Add `ensure pb` to your `server.cfg`
 4. Start your server
 
@@ -375,7 +375,7 @@ local connected = exports['pb']:isRealtimeConnected()
 AddEventHandler('playerJoining', function()
     local source = source
     local identifiers = GetPlayerIdentifiers(source)
-    
+
     local player = exports['pb']:create("players", {
         identifier = identifiers[1],
         name = GetPlayerName(source),
@@ -388,10 +388,10 @@ end)
 AddEventHandler('playerDropped', function()
     local source = source
     local identifiers = GetPlayerIdentifiers(source)
-    
+
     local filter = exports['pb']:filter("identifier = {:id}", {id = identifiers[1]})
     local player = exports['pb']:getFirstListItem("players", filter)
-    
+
     if player then
         exports['pb']:update("players", player.id, {
             playtime = player.playtime + 60  -- Add 1 hour
@@ -476,6 +476,6 @@ Check `Config.Superuser` credentials in `config.lua`. Delete and restart to rege
 
 This resource integrates PocketBase (MIT License) into FiveM.
 
-**Version**: 0.30.4+  
-**FiveM Forum**: [Link to your forum post]  
+**Version**: 0.30.4+
+**FiveM Forum**: [Link to your forum post]
 **Support**: [Link to your Discord/GitHub]
