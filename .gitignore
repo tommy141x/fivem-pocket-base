@@ -1,0 +1,15 @@
+# Test script (optional, users can enable/disable)
+demo.lua
+
+# PocketBase data directory (contains database)
+pb_data/
+
+# PocketBase migrations (generated based on collection changes)
+pb_migrations/
+
+# Backup files
+*.backup
+*.bak
+
+# Log files
+*.log
